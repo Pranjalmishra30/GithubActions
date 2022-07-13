@@ -1,0 +1,8 @@
+name: Email action
+on: [push]  
+jobs:  
+  send-email:  
+    runs-on: ubuntu-latest  
+    steps:
+      - name: test  
+        run: echo Hello
