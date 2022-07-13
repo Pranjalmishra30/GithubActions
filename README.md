@@ -91,6 +91,31 @@ cron statements are used to give schedule for tasks to execute. The time format 
 
 
 
+### Send email  
+```yml
+name: Email action
+on: [push]  
+jobs:  
+  send-email:  
+    runs-on: ubuntu-latest  
+    steps:
+      - name: send mail  
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Email sent via Github actions
+          to: pranjalmishra2022@gmail.com,bunumishu@gmail.com
+          from: Github action bot
+          secure: true
+          body: Email sent by actions !!!
+```  
+It's advised to use an app password for sending emails. Checkout [this guide](https://support.google.com/accounts/answer/185833?hl=en)  
+Email username and password need to saved as [secrets for your repository](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md)  
+
+
 ## Customized Workflow  
 Using individual scripts to build an action for a customized workflow.  
 
