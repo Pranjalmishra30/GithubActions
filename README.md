@@ -4,6 +4,9 @@ This repository documents my findings from testing and learning about Github-Act
 
 Github actions scripts are saved as **YAML** files and stored in [.github/workflows](.github/workflows/) directory.  
 
+You can check out the results in the [actions tab](https://github.com/Pranjalmishra30/GithubActions/actions).  
+
+
 ## Index  
 1. [Commonly used Github Actions](#commonly-used-github-actions)  
 2. [Customized workflow](#customized-workflow)  
