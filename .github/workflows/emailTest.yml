@@ -9,10 +9,10 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-        subject: Email sent via Github actions
-        to: pranjalmishra2022@gmail.com,bunumishu@gmail.com
-        from: Github action bot
-        secure: true
-        body: Email sent by actions !!!
-        
+          subject: Email sent via Github actions
+          to: pranjalmishra2022@gmail.com,bunumishu@gmail.com
+          from: Github action bot
+          secure: true
+          body: Email sent by actions !!!
+
 
