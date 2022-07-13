@@ -67,9 +67,9 @@ jobs:
     steps:  
       - uses: actions/checkout@v2
       - run: |
-        chmod +x script.sh
-        ./script.sh
-      shell: bash 
+          chmod +x script.sh
+          ./script.sh
+        shell: bash 
 ```
 
 ### Schedule-task  
