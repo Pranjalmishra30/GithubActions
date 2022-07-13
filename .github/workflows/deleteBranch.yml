@@ -1,0 +1,10 @@
+name: Delete branch  
+on: [push]  
+jobs:  
+  delete-branch:
+    runs-on: ubuntu-latest  
+    steps:  
+      - uses: dawidd6/action-delete-branch@v3
+        with:
+          github_token: ${{github.token}}
+          branches: Created-Actions
