@@ -2,6 +2,8 @@
 Github actions allow us to automate, build and deploy customized workflows.  
 This repository documents my findings from testing and learning about Github-Actions
 
+Github actions scripts are saved as **YAML** files and stored in [.github/workflows](.github/workflows/) directory.  
+
 ## Index  
 1. [Commonly used Github Actions](#commonly-used-github-actions)  
 2. [Customized workflow](#customized-workflow)  
@@ -85,13 +87,11 @@ jobs:
       - run: echo "Job has run at scheduled time"
 ```  
 
-cron statements are used to give schedule for tasks to execute. The time format used is UTC, so convert your local time to UTC. Use [Crontab](https://crontab.guru/) to build your custom schedule statements. Checkout the [documentation](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule) 
+cron statements are used to give schedule for tasks to execute. The time format used is UTC, so convert your local time to UTC. Use [Crontab](https://crontab.guru/) to build your custom schedule statements. Checkout the [documentation](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule).  
+There is no guarantee that the scheduled tasks will run at the desired time. There is generally a delay. Checkout this [blog post](https://upptime.js.org/blog/2021/01/22/github-actions-schedule-not-working/) to understand this issue better.
 
 
-
-
-
-### Send email  
+### [Send email](https://github.com/marketplace/actions/send-email)  
 ```yml
 name: Email action
 on: [push]  
